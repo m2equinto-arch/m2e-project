@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M2E Project — Permis de Construire Clé en Main</title>
+    <meta name="description" content="M2E Project — Auto-entreprise spécialisée dans les dossiers de permis de construire clé en main pour maisons individuelles < 150m². Plans 2D, pièces écrites, rendus 3D.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ============================================ -->
+    <!-- NAVIGATION -->
+    <!-- ============================================ -->
+    <nav class="nav" id="nav">
+        <div class="nav__inner">
+            <a href="#" class="nav__logo">
+                <span class="nav__logo-m2e">M2E</span>
+                <span class="nav__logo-project">PROJECT</span>
+            </a>
+            <button class="nav__toggle" id="navToggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav__links" id="navLinks">
+                <li><a href="#expertise">Expertise</a></li>
+                <li><a href="#realisations">Réalisations</a></li>
+                <li><a href="#formules">Formules</a></li>
+                <li><a href="#contact" class="nav__cta">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ============================================ -->
+    <!-- HERO -->
+    <!-- ============================================ -->
+    <header class="hero" id="hero">
+        <div class="hero__bg">
+            <div class="hero__curve"></div>
+        </div>
+        <div class="hero__content">
+            <p class="hero__eyebrow reveal">Auto-entreprise · Milly-la-Forêt</p>
+            <h1 class="hero__title">
+                <span class="reveal reveal--d1">Vos projets</span>
+                <span class="reveal reveal--d2"><em>modélisés, projetés</em></span>
+                <span class="reveal reveal--d3">et concrétisés.</span>
+            </h1>
+            <p class="hero__subtitle reveal reveal--d4">
+                Plans 2D · Rendus 3D photoréalistes · Dossiers PCMI clé en main<br>
+                Particuliers · Professionnels · Projets &lt; 150m²
+            </p>
+            <div class="hero__actions reveal reveal--d5">
+                <a href="#formules" class="btn btn--primary">Découvrir les formules</a>
+                <a href="#realisations" class="btn btn--ghost">Voir les réalisations</a>
+            </div>
+        </div>
+        <div class="hero__scroll-hint reveal reveal--d5">
+            <div class="hero__scroll-line"></div>
+        </div>
+    </header>
+
+    <!-- ============================================ -->
+    <!-- INTRO / QUI SUIS-JE -->
+    <!-- ============================================ -->
+    <section class="intro" id="intro">
+        <div class="intro__container">
+            <div class="intro__col intro__col--text">
+                <span class="section-label reveal">À propos</span>
+                <h2 class="intro__title reveal">
+                    Une approche<br><em>sur mesure</em> de<br>votre projet.
+                </h2>
+                <div class="intro__body reveal">
+                    <p>
+                        M2E Project est une auto-entreprise basée à <strong>Milly-la-Forêt</strong>,
+                        spécialisée dans la modélisation, la projection et le montage de dossiers
+                        de permis de construire pour les particuliers.
+                    </p>
+                    <p>
+                        De la conception initiale au dossier complet, je vous accompagne
+                        dans chaque étape : plans techniques conformes, pièces écrites
+                        réglementaires (PCMI 1 à 8), et si vous le souhaitez, des
+                        <strong>rendus 3D photoréalistes</strong> pour visualiser votre futur projet.
+                    </p>
+                    <p>
+                        Mon engagement : un dossier rigoureux, conforme et prêt à déposer —
+                        pour que vous puissiez vous concentrer sur l'essentiel.
+                    </p>
+                </div>
+            </div>
+            <div class="intro__col intro__col--visual">
+                <div class="intro__image-stack reveal">
+                    <div class="intro__image intro__image--1">
+                        <img src="images/about-rendu.png" alt="Rendu 3D" style="width:100%;height:100%;object-fit:cover;">
+                    </div>
+                    <div class="intro__image intro__image--2">
+                        <img src="images/about-plan.jpg" alt="Plan 2D" style="width:100%;height:100%;object-fit:cover;">
+                    </div>
+                    <div class="intro__accent-shape"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- EXPERTISE / DOMAINES -->
+    <!-- ============================================ -->
+    <section class="expertise" id="expertise">
+        <div class="expertise__header">
+            <span class="section-label reveal">Domaines d'intervention</span>
+            <h2 class="expertise__title reveal">
+                Chaque projet<br>est <em>unique</em>.
+            </h2>
+        </div>
+        <div class="expertise__grid">
+            <article class="expertise__card reveal" style="--card-delay: 0s">
+                <div class="expertise__card-number">01</div>
+                <h3>Construction neuve</h3>
+                <p>De la conception initiale au dépôt du permis. Maisons individuelles, projets sur terrain nu — une vision complète de A à Z.</p>
+                <div class="expertise__card-line"></div>
+            </article>
+            <article class="expertise__card reveal" style="--card-delay: 0.1s">
+                <div class="expertise__card-number">02</div>
+                <h3>Extensions &<br>Agrandissements</h3>
+                <p>Création de suites parentales, garages, dépendances. Agrandir votre espace de vie en respectant les règles d'urbanisme.</p>
+                <div class="expertise__card-line"></div>
+            </article>
+            <article class="expertise__card reveal" style="--card-delay: 0.2s">
+                <div class="expertise__card-number">03</div>
+                <h3>Réhabilitation &<br>Rénovation</h3>
+                <p>Transformation de maisons, remise aux normes de l'existant et réhabilitation d'espaces anciens avec respect du patrimoine.</p>
+                <div class="expertise__card-line"></div>
+            </article>
+            <article class="expertise__card reveal" style="--card-delay: 0.3s">
+                <div class="expertise__card-number">04</div>
+                <h3>Aménagements<br>extérieurs</h3>
+                <p>Terrasses, piscines, abris de jardin — Déclaration Préalable de travaux incluse dans l'accompagnement.</p>
+                <div class="expertise__card-line"></div>
+            </article>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- PROCESSUS -->
+    <!-- ============================================ -->
+    <section class="process">
+        <div class="process__container">
+            <span class="section-label reveal">Comment ça marche</span>
+            <h2 class="process__title reveal">Un accompagnement<br><em>étape par étape</em>.</h2>
+            <div class="process__steps">
+                <div class="process__step reveal">
+                    <div class="process__step-num">①</div>
+                    <h3>Échange & Briefing</h3>
+                    <p>On discute de votre projet, vos besoins, votre terrain. Envoyez-moi vos documents et vos idées.</p>
+                </div>
+                <div class="process__step reveal">
+                    <div class="process__step-num">②</div>
+                    <h3>Conception & Plans</h3>
+                    <p>Réalisation des plans 2D techniques, conformes aux exigences réglementaires de votre commune.</p>
+                </div>
+                <div class="process__step reveal">
+                    <div class="process__step-num">③</div>
+                    <h3>Dossier complet</h3>
+                    <p>Montage des pièces écrites PCMI 1 à 8. Option rendu 3D pour mieux visualiser votre futur projet.</p>
+                </div>
+                <div class="process__step reveal">
+                    <div class="process__step-num">④</div>
+                    <h3>Dépôt en mairie</h3>
+                    <p>Votre dossier est prêt à être déposé. Je reste disponible pour les éventuelles demandes de pièces complémentaires.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- RÉALISATIONS -->
+    <!-- ============================================ -->
+    <section class="portfolio" id="realisations">
+        <div class="portfolio__header">
+            <span class="section-label reveal">Portfolio</span>
+            <h2 class="portfolio__title reveal">
+                Quelques<br><em>réalisations</em>.
+            </h2>
+        </div>
+        <!-- ── PROJET 1 : Réhabilitation maison 80m² ── -->
+        <div class="portfolio__section reveal">
+            <div class="portfolio__section-header">
+                <span class="portfolio__project-num">01</span>
+                <h3 class="portfolio__project-title">Réhabilitation lourde</h3>
+                <p class="portfolio__project-meta">Maison individuelle · 80m² · Milly-la-Forêt</p>
+            </div>
+            <div class="portfolio__gallery">
+                <div class="portfolio__item portfolio__item--wide reveal">
+                    <div class="portfolio__img">
+                        <img src="images/rehab-rendu-exterieur.jpg" alt="Rendu 3D réhabilitation maison 80m²" style="width:100%;height:100%;object-fit:cover;">
+                    </div>
+                    <div class="portfolio__caption">
+                        <h3>Vue extérieure</h3>
+                        <p>Rendu 3D de la réhabilitation complète</p>
+                    </div>
+                </div>
+                <div class="portfolio__item reveal">
+                    <div class="portfolio__img">
+                        <img src="images/rehab-plans.jpg" alt="Plans 2D maison 80m²" style="width:100%;height:100%;object-fit:cover;">
+                    </div>
+                    <div class="portfolio__caption">
+                        <h3>Plans techniques</h3>
+                        <p>Plans 2D conformes · Coupes & façades</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ── PROJET 2 : Passerelle 3 bâtiments / 9 logements ── -->
+        <div class="portfolio__section reveal">
+            <div class="portfolio__section-header">
+                <span class="portfolio__project-num">02</span>
+                <h3 class="portfolio__project-title">Construction neuve — Passerelle</h3>
+                <p class="portfolio__project-meta">3 bâtiments · 9 logements</p>
+            </div>
+            <div class="portfolio__gallery">
+                <div class="portfolio__item reveal">
+                    <div class="portfolio__img">
+                        <img src="images/passerelle-bat1.png" alt="Rendu bâtiment 1" style="width:100%;height:100%;object-fit:cover;">
+                    </div>
+                    <div class="portfolio__caption">
+                        <h3>Bâtiment 1</h3>
+                        <p>Rendu 3D extérieur</p>
+                    </div>
+                </div>
+                <div class="portfolio__item reveal">
+                    <div class="portfolio__img">
+                        <img src="images/passerelle-bat2.png" alt="Rendu bâtiment 2" style="width:100%;height:100%;object-fit:cover;">
+                    </div>
+                    <div class="portfolio__caption">
+                        <h3>Bâtiment 2</h3>
+                        <p>Rendu 3D extérieur</p>
+                    </div>
+                </div>
+                <div class="portfolio__item reveal">
+                    <div class="portfolio__img">
+                        <img src="images/passerelle-bat3.png" alt="Rendu bâtiment 3" style="width:100%;height:100%;object-fit:cover;">
+                    </div>
+                    <div class="portfolio__caption">
+                        <h3>Bâtiment 3</h3>
+                        <p>Rendu 3D extérieur</p>
+                    </div>
+                </div>
+                <div class="portfolio__item portfolio__item--wide reveal">
+                    <div class="portfolio__img">
+                        <img src="images/passerelle-interieur.png" alt="Rendu intérieur salon" style="width:100%;height:100%;object-fit:cover;">
+                    </div>
+                    <div class="portfolio__caption">
+                        <h3>Salon — Vue 1</h3>
+                        <p>Rendu photoréaliste · Séjour ouvert</p>
+                    </div>
+                </div>
+                <div class="portfolio__item reveal">
+                    <div class="portfolio__img">
+                        <img src="images/passerelle-salon.png" alt="Rendu intérieur salon vue 2" style="width:100%;height:100%;object-fit:cover;">
+                    </div>
+                    <div class="portfolio__caption">
+                        <h3>Salon — Vue 2</h3>
+                        <p>Second angle de vue</p>
+                    </div>
+                </div>
+                <div class="portfolio__item reveal">
+                    <div class="portfolio__img">
+                        <img src="images/passerelle-chambre.png" alt="Rendu intérieur chambre" style="width:100%;height:100%;object-fit:cover;">
+                    </div>
+                    <div class="portfolio__caption">
+                        <h3>Chambre</h3>
+                        <p>Rendu photoréaliste</p>
+                    </div>
+                </div>
+                <div class="portfolio__item reveal">
+                    <div class="portfolio__img">
+                        <img src="images/passerelle-sdb.png" alt="Rendu intérieur salle de bain" style="width:100%;height:100%;object-fit:cover;">
+                    </div>
+                    <div class="portfolio__caption">
+                        <h3>Salle de bain</h3>
+                        <p>Rendu photoréaliste</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ── DOSSIER COMPLET : Exemple PCMI ── -->
+        <div class="portfolio__section reveal">
+            <div class="portfolio__section-header">
+                <span class="portfolio__project-num">03</span>
+                <h3 class="portfolio__project-title">Dossier PCMI complet</h3>
+                <p class="portfolio__project-meta">Exemple : Réhabilitation maison 80m² · Milly-la-Forêt</p>
+            </div>
+            <div class="portfolio__gallery">
+                <div class="portfolio__item portfolio__item--wide reveal">
+                    <div class="portfolio__img">
+                        <img src="images/dossier-pcmi-complet.png" alt="Dossier PCMI complet" style="width:100%;height:100%;object-fit:cover;">
+                    </div>
+                    <div class="portfolio__caption">
+                        <h3>Dossier clé en main</h3>
+                        <p>PCMI 1 à 8 · Plans · Notices · Insertion paysagère</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- FORMULES -->
+    <!-- ============================================ -->
+    <section class="pricing" id="formules">
+        <div class="pricing__container">
+            <span class="section-label reveal">Formules</span>
+            <h2 class="pricing__title reveal">
+                Des formules<br><em>claires et adaptées</em>.
+            </h2>
+            <p class="pricing__subtitle reveal">
+                Chaque projet est unique. Ces formules servent de base —
+                contactez-moi pour un devis personnalisé.
+            </p>
+
+            <!-- ── CATÉGORIE 1 : Dossiers PCMI ── -->
+            <div class="pricing__category reveal">
+                <h3 class="pricing__category-title">Dossiers Permis de Construire</h3>
+                <p class="pricing__category-desc">Projets maison individuelle &lt; 150m² — Dossier complet prêt à déposer en mairie.</p>
+            </div>
+
+            <div class="pricing__grid">
+                <article class="pricing__card reveal">
+                    <div class="pricing__card-badge">Essentiel</div>
+                    <h3 class="pricing__card-name">PCMI — Base</h3>
+                    <p class="pricing__card-desc">Le dossier complet pour déposer votre permis de construire en toute conformité.</p>
+                    <ul class="pricing__features">
+                        <li>Plans techniques 2D conformes</li>
+                        <li>Pièces écrites PCMI 1 à 8</li>
+                        <li>Plan de situation & plan de masse</li>
+                        <li>Plan de coupe du terrain</li>
+                        <li>Notices descriptives</li>
+                        <li>Insertion paysagère (photo + croquis)</li>
+                    </ul>
+                    <a href="#contact" class="btn btn--outline">Demander un devis</a>
+                </article>
+
+                <article class="pricing__card pricing__card--featured reveal">
+                    <div class="pricing__card-badge">Recommandé</div>
+                    <h3 class="pricing__card-name">PCMI — Complète</h3>
+                    <p class="pricing__card-desc">Le dossier PCMI enrichi de rendus 3D pour convaincre et se projeter.</p>
+                    <ul class="pricing__features">
+                        <li>Tout le contenu de la Formule Base</li>
+                        <li>Rendus 3D photoréalistes extérieurs</li>
+                        <li>Insertion paysagère 3D réaliste</li>
+                        <li>Vues intérieures (en option)</li>
+                        <li>Modifications incluses (1 aller-retour)</li>
+                        <li>Accompagnement jusqu'au dépôt</li>
+                    </ul>
+                    <a href="#contact" class="btn btn--primary">Demander un devis</a>
+                </article>
+
+                <article class="pricing__card reveal">
+                    <div class="pricing__card-badge">Sur mesure</div>
+                    <h3 class="pricing__card-name">Déclaration Préalable</h3>
+                    <p class="pricing__card-desc">Pour les projets ne nécessitant pas un permis de construire complet.</p>
+                    <ul class="pricing__features">
+                        <li>Terrasses & aménagements extérieurs</li>
+                        <li>Abris de jardin & annexes</li>
+                        <li>Piscines</li>
+                        <li>Clôtures & portails</li>
+                        <li>Dossier DP complet</li>
+                        <li>Accompagnement personnalisé</li>
+                    </ul>
+                    <a href="#contact" class="btn btn--outline">Demander un devis</a>
+                </article>
+            </div>
+
+            <!-- ── CATÉGORIE 2 : Prestations à la carte ── -->
+            <div class="pricing__category pricing__category--second reveal">
+                <h3 class="pricing__category-title">Prestations à la carte</h3>
+                <p class="pricing__category-desc">Pour les particuliers ou professionnels qui ont besoin d'une prestation spécifique, sans dossier complet.</p>
+            </div>
+
+            <div class="pricing__grid">
+                <article class="pricing__card reveal">
+                    <div class="pricing__card-badge">Visualisation</div>
+                    <h3 class="pricing__card-name">Rendus 3D</h3>
+                    <p class="pricing__card-desc">Des visuels photoréalistes pour valoriser un projet, convaincre un client ou se projeter.</p>
+                    <ul class="pricing__features">
+                        <li>Rendus extérieurs photoréalistes</li>
+                        <li>Rendus intérieurs (séjour, chambre…)</li>
+                        <li>Insertions paysagères réalistes</li>
+                        <li>Vues aériennes & d'ambiance</li>
+                        <li>Retouches incluses (1 aller-retour)</li>
+                        <li>Formats HD pour impression ou web</li>
+                    </ul>
+                    <a href="#contact" class="btn btn--outline">Demander un devis</a>
+                </article>
+
+                <article class="pricing__card reveal">
+                    <div class="pricing__card-badge">Modélisation</div>
+                    <h3 class="pricing__card-name">Maquette 3D</h3>
+                    <p class="pricing__card-desc">Modélisation complète de votre projet en 3D — idéal pour la présentation ou la communication.</p>
+                    <ul class="pricing__features">
+                        <li>Modélisation 3D du bâtiment</li>
+                        <li>Textures & matériaux réalistes</li>
+                        <li>Environnement & contexte paysager</li>
+                        <li>Export pour présentation ou vidéo</li>
+                        <li>Idéal promoteurs & entreprises</li>
+                        <li>Modifications incluses</li>
+                    </ul>
+                    <a href="#contact" class="btn btn--outline">Demander un devis</a>
+                </article>
+
+                <article class="pricing__card reveal">
+                    <div class="pricing__card-badge">Technique</div>
+                    <h3 class="pricing__card-name">Plans 2D</h3>
+                    <p class="pricing__card-desc">Plans techniques sur mesure pour vos besoins spécifiques, sans dossier PCMI complet.</p>
+                    <ul class="pricing__features">
+                        <li>Plans de masse & de situation</li>
+                        <li>Plans de coupes & façades</li>
+                        <li>Plans d'aménagement intérieur</li>
+                        <li>Cotations & annotations</li>
+                        <li>Formats PDF & DWG</li>
+                        <li>Idéal artisans & petites entreprises</li>
+                    </ul>
+                    <a href="#contact" class="btn btn--outline">Demander un devis</a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- CONTACT -->
+    <!-- ============================================ -->
+    <section class="contact" id="contact">
+        <div class="contact__container">
+            <div class="contact__col contact__col--info">
+                <span class="section-label reveal">Contact</span>
+                <h2 class="contact__title reveal">
+                    Parlons de<br><em>votre projet</em>.
+                </h2>
+                <div class="contact__details reveal">
+                    <div class="contact__detail">
+                        <span class="contact__detail-label">Téléphone</span>
+                        <a href="tel:+33620906255">06 20 90 62 55</a>
+                    </div>
+                    <div class="contact__detail">
+                        <span class="contact__detail-label">Email</span>
+                        <a href="mailto:m2e.quinto@gmail.com">m2e.quinto@gmail.com</a>
+                    </div>
+                    <div class="contact__detail">
+                        <span class="contact__detail-label">Localisation</span>
+                        <span>Milly-la-Forêt, Essonne (91)</span>
+                    </div>
+                    <div class="contact__detail">
+                        <span class="contact__detail-label">Zone d'intervention</span>
+                        <span>Île-de-France & environs</span>
+                    </div>
+                </div>
+            </div>
+            <div class="contact__col contact__col--form">
+                <form class="contact__form reveal" id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                    <div class="form-group">
+                        <label for="name">Nom complet</label>
+                        <input type="text" id="name" name="name" required autocomplete="name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required autocomplete="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Téléphone</label>
+                        <input type="tel" id="phone" name="phone" autocomplete="tel">
+                    </div>
+                    <div class="form-group">
+                        <label for="project">Type de projet</label>
+                        <select id="project" name="project">
+                            <option value="" disabled selected>Sélectionnez...</option>
+                            <option value="construction">Construction neuve</option>
+                            <option value="extension">Extension / Agrandissement</option>
+                            <option value="renovation">Réhabilitation / Rénovation</option>
+                            <option value="exterieur">Aménagement extérieur (DP)</option>
+                            <option value="autre">Autre</option>
+                        </select>
+                    </div>
+                    <div class="form-group form-group--full">
+                        <label for="message">Décrivez votre projet</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn--primary btn--full">Envoyer ma demande</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- FOOTER -->
+    <!-- ============================================ -->
+    <footer class="footer">
+        <div class="footer__inner">
+            <div class="footer__brand">
+                <span class="nav__logo-m2e">M2E</span>
+                <span class="nav__logo-project">PROJECT</span>
+            </div>
+            <p class="footer__legal">
+                © 2026 M2E Project — Auto-entreprise<br>
+                Milly-la-Forêt, Essonne (91)
+            </p>
+            <p class="footer__note">
+                Projets maison individuelle &lt; 150m² — ne nécessitant pas le recours à un architecte.
+            </p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
