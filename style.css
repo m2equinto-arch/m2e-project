@@ -479,19 +479,30 @@ h2 em, h1 em {
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
 }
 
-.intro__image--1 {
+.intro__image--main {
     position: relative;
     z-index: 2;
+    border-radius: 16px;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.12);
+    transform: scale(1.02);
 }
 
-.intro__image--2 {
+.intro__image--secondary {
     position: absolute;
-    bottom: -20px;
-    right: -20px;
-    width: 55%;
+    bottom: -16px;
+    right: -16px;
+    width: 40%;
     z-index: 3;
-    border: 4px solid var(--white);
-    border-radius: 12px;
+    border: 3px solid var(--white);
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    opacity: 0.85;
+    transition: all 0.5s var(--ease-out-expo);
+}
+
+.intro__image-stack:hover .intro__image--secondary {
+    opacity: 1;
+    transform: translate(-4px, -4px);
 }
 
 .intro__accent-shape {
@@ -773,6 +784,35 @@ h2 em, h1 em {
     letter-spacing: 0.02em;
 }
 
+.portfolio__interior-label {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 0;
+    margin-top: 12px;
+    border-top: 1px solid rgba(74, 125, 150, 0.1);
+}
+
+.portfolio__interior-badge {
+    font-family: var(--font-sans);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--white);
+    background: var(--blue);
+    padding: 6px 14px;
+    border-radius: 30px;
+}
+
+.portfolio__interior-info {
+    font-family: var(--font-serif);
+    font-size: 16px;
+    font-style: italic;
+    color: var(--ink-muted);
+}
+
 .portfolio__gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -819,6 +859,72 @@ h2 em, h1 em {
 .portfolio__caption p {
     font-size: 13px;
     color: var(--ink-muted);
+}
+
+/* Dossier PCMI — layout image + texte côte à côte */
+.portfolio__dossier-layout {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: clamp(32px, 5vw, 64px);
+    align-items: center;
+}
+
+.portfolio__dossier-img {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+}
+
+.portfolio__dossier-detail h3 {
+    font-family: var(--font-serif);
+    font-size: clamp(20px, 2.5vw, 26px);
+    font-weight: 500;
+    margin-bottom: 16px;
+    line-height: 1.3;
+}
+
+.portfolio__dossier-intro {
+    font-size: 14px;
+    color: var(--ink-light);
+    margin-bottom: 24px;
+    line-height: 1.7;
+}
+
+.portfolio__dossier-list {
+    list-style: none;
+    margin-bottom: 24px;
+}
+
+.portfolio__dossier-list li {
+    font-size: 14px;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+    color: var(--ink-light);
+    line-height: 1.5;
+}
+
+.portfolio__dossier-list li strong {
+    color: var(--blue);
+    font-weight: 600;
+    font-family: var(--font-sans);
+    font-size: 12px;
+    letter-spacing: 0.05em;
+}
+
+.portfolio__dossier-note {
+    font-size: 13px;
+    font-style: italic;
+    color: var(--blue);
+    padding: 12px 16px;
+    background: var(--blue-pale);
+    border-radius: 8px;
+    border-left: 3px solid var(--blue);
+}
+
+@media (max-width: 768px) {
+    .portfolio__dossier-layout {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* =============================================
