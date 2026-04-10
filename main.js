@@ -304,23 +304,47 @@
     var contactForm = document.getElementById('contactForm');
     if (contactForm) {
         contactForm.addEventListener('submit', function (e) {
-            // If you want to use Formspree, keep the default submit.
-            // For now, show a simple confirmation without a backend.
             e.preventDefault();
 
             var btn = this.querySelector('button[type="submit"]');
             var originalText = btn.textContent;
+            var formData = new FormData(contactForm);
 
-            btn.textContent = 'Envoyé !';
-            btn.style.background = '#2D8B5A';
+            btn.textContent = 'Envoi en cours...';
             btn.disabled = true;
 
-            setTimeout(function () {
-                btn.textContent = originalText;
-                btn.style.background = '';
-                btn.disabled = false;
-                contactForm.reset();
-            }, 3000);
+            fetch(contactForm.action, {
+                method: 'POST',
+                body: formData,
+                headers: { 'Accept': 'application/json' }
+            }).then(function (response) {
+                if (response.ok) {
+                    btn.textContent = 'Envoyé !';
+                    btn.style.background = '#2D8B5A';
+                    contactForm.reset();
+                    setTimeout(function () {
+                        btn.textContent = originalText;
+                        btn.style.background = '';
+                        btn.disabled = false;
+                    }, 3000);
+                } else {
+                    btn.textContent = 'Erreur, réessayez';
+                    btn.style.background = '#C0392B';
+                    setTimeout(function () {
+                        btn.textContent = originalText;
+                        btn.style.background = '';
+                        btn.disabled = false;
+                    }, 3000);
+                }
+            }).catch(function () {
+                btn.textContent = 'Erreur, réessayez';
+                btn.style.background = '#C0392B';
+                setTimeout(function () {
+                    btn.textContent = originalText;
+                    btn.style.background = '';
+                    btn.disabled = false;
+                }, 3000);
+            });
         });
     }
 
