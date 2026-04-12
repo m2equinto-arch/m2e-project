@@ -393,12 +393,27 @@
         }
     }
 
+    // ─── FLOATING BUTTONS (show after scroll) ─────
+    function initFloatingButtons() {
+        var buttons = document.getElementById('floatingButtons');
+        if (!buttons) return;
+
+        window.addEventListener('scroll', function () {
+            if (window.scrollY > 400) {
+                buttons.classList.add('is-visible');
+            } else {
+                buttons.classList.remove('is-visible');
+            }
+        });
+    }
+
     // ─── INIT ────────────────────────────────────
     function init() {
         animateHeroText();
         initParallax();
         initSectionTransitions();
         initCursorGlow();
+        initFloatingButtons();
         updateParallax();
     }
 

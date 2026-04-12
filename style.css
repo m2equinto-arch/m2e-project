@@ -1215,6 +1215,80 @@ h2 em, h1 em {
 }
 
 /* =============================================
+   BOUTONS FLOTTANTS (WhatsApp + Appel)
+   ============================================= */
+.floating-buttons {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    z-index: 900;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s var(--ease-out-expo);
+}
+
+.floating-buttons.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.floating-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 20px;
+    border-radius: 60px;
+    font-family: var(--font-sans);
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--white);
+    text-decoration: none;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    transition: all 0.4s var(--ease-out-expo);
+}
+
+.floating-btn:hover {
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+}
+
+.floating-btn--phone {
+    background: var(--blue);
+}
+
+.floating-btn--phone:hover {
+    background: var(--blue-deep);
+}
+
+.floating-btn--whatsapp {
+    background: #25D366;
+}
+
+.floating-btn--whatsapp:hover {
+    background: #1EBE5A;
+}
+
+/* Sur mobile : boutons plus compacts côte à côte */
+@media (max-width: 768px) {
+    .floating-buttons {
+        flex-direction: row;
+        bottom: 16px;
+        right: 16px;
+        left: 16px;
+        justify-content: center;
+    }
+
+    .floating-btn {
+        flex: 1;
+        justify-content: center;
+        padding: 14px 16px;
+    }
+}
+
+/* =============================================
    RESPONSIVE
    ============================================= */
 @media (max-width: 1024px) {
