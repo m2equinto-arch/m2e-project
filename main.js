@@ -407,6 +407,63 @@
         });
     }
 
+    // ─── PORTFOLIO — EXPANSION INLINE ────────────
+    function initPortfolioExpand() {
+        const cards = document.querySelectorAll('.portfolio__card');
+        if (!cards.length) return;
+
+        function collapseAll(except) {
+            cards.forEach(function (c) {
+                if (c !== except) c.classList.remove('is-expanded');
+            });
+        }
+
+        cards.forEach(function (card) {
+            const trigger = card.querySelector('.portfolio__card-trigger');
+            const cover = card.querySelector('.portfolio__card-img img');
+            const initialCover = cover.getAttribute('data-cover');
+            const thumbs = card.querySelectorAll('.portfolio__thumb');
+            const strip = card.querySelector('.portfolio__expand-strip');
+
+            trigger.addEventListener('click', function () {
+                const isOpen = card.classList.contains('is-expanded');
+                if (isOpen) {
+                    card.classList.remove('is-expanded');
+                    cover.src = initialCover;
+                    thumbs.forEach(function (t, i) { t.classList.toggle('is-active', i === 0); });
+                } else {
+                    collapseAll(card);
+                    card.classList.add('is-expanded');
+                }
+            });
+
+            thumbs.forEach(function (thumb) {
+                thumb.addEventListener('click', function (e) {
+                    e.stopPropagation();
+                    const src = thumb.getAttribute('data-src');
+                    cover.src = src;
+                    thumbs.forEach(function (t) { t.classList.remove('is-active'); });
+                    thumb.classList.add('is-active');
+                });
+            });
+
+            // Molette verticale → scroll horizontal de la bande
+            strip.addEventListener('wheel', function (e) {
+                if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+                    e.preventDefault();
+                    strip.scrollLeft += e.deltaY;
+                }
+            }, { passive: false });
+        });
+
+        // Click hors d'une carte ouverte → repli
+        document.addEventListener('click', function (e) {
+            if (!e.target.closest('.portfolio__card')) {
+                collapseAll(null);
+            }
+        });
+    }
+
     // ─── INIT ────────────────────────────────────
     function init() {
         animateHeroText();
@@ -414,6 +471,7 @@
         initSectionTransitions();
         initCursorGlow();
         initFloatingButtons();
+        initPortfolioExpand();
         updateParallax();
     }
 

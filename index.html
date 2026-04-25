@@ -49,8 +49,7 @@
     <nav class="nav" id="nav">
         <div class="nav__inner">
             <a href="#" class="nav__logo">
-                <span class="nav__logo-m2e">M2E</span>
-                <span class="nav__logo-project">PROJECT</span>
+                <img src="images/logo-bleu.png" alt="M2E Project" class="nav__logo-img">
             </a>
             <button class="nav__toggle" id="navToggle" aria-label="Menu">
                 <span></span>
@@ -216,123 +215,84 @@
             <h2 class="portfolio__title reveal">
                 Quelques<br><em>réalisations</em>.
             </h2>
-        </div>
-        <!-- ── PROJET 1 : Réhabilitation maison 80m² ── -->
-        <div class="portfolio__section reveal">
-            <div class="portfolio__section-header">
-                <span class="portfolio__project-num">01</span>
-                <h3 class="portfolio__project-title">Réhabilitation lourde</h3>
-                <p class="portfolio__project-meta">Maison individuelle · 80m² · Milly-la-Forêt</p>
-            </div>
-            <div class="portfolio__gallery">
-                <div class="portfolio__item portfolio__item--wide reveal">
-                    <div class="portfolio__img">
-                        <img src="images/rehab-rendu-exterieur.jpg" alt="Rendu 3D réhabilitation maison 80m²" style="width:100%;height:100%;object-fit:cover;">
-                    </div>
-                    <div class="portfolio__caption">
-                        <h3>Vue extérieure</h3>
-                        <p>Rendu 3D de la réhabilitation complète</p>
-                    </div>
-                </div>
-                <div class="portfolio__item reveal">
-                    <div class="portfolio__img">
-                        <img src="images/rehab-plans.jpg" alt="Plans 2D maison 80m²" style="width:100%;height:100%;object-fit:cover;">
-                    </div>
-                    <div class="portfolio__caption">
-                        <h3>Plans techniques</h3>
-                        <p>Plan 2D conforme · façade</p>
-                    </div>
-                </div>
-            </div>
+            <p class="portfolio__intro reveal">Cliquez sur un projet pour découvrir l'ensemble des visuels.</p>
         </div>
 
-        <!-- ── PROJET 2 : Passerelle 3 bâtiments / 9 logements ── -->
-        <div class="portfolio__section reveal">
-            <div class="portfolio__section-header">
-                <span class="portfolio__project-num">02</span>
-                <h3 class="portfolio__project-title">Construction neuve — Passerelle</h3>
-                <p class="portfolio__project-meta">3 bâtiments · 9 logements</p>
-            </div>
-            <div class="portfolio__gallery">
-                <div class="portfolio__item reveal">
-                    <div class="portfolio__img">
-                        <img src="images/passerelle-bat1.png" alt="Rendu bâtiment 1" style="width:100%;height:100%;object-fit:cover;">
+        <div class="portfolio__grid">
+            <!-- ── PROJET 1 : Construction neuve Passerelle ── -->
+            <article class="portfolio__card reveal" data-project="passerelle">
+                <div class="portfolio__card-trigger">
+                    <div class="portfolio__card-img">
+                        <img src="images/passerelle-bat1.png" alt="Construction neuve Passerelle" data-cover="images/passerelle-bat1.png">
                     </div>
-                    <div class="portfolio__caption">
-                        <h3>Bâtiment 1</h3>
-                        <p>Rendu 3D extérieur</p>
+                    <div class="portfolio__card-body">
+                        <span class="portfolio__card-cat">Construction neuve</span>
+                        <h3 class="portfolio__card-title">Passerelle</h3>
+                        <p class="portfolio__card-meta">3 bâtiments · 9 logements · 7 vues</p>
                     </div>
                 </div>
-                <div class="portfolio__item reveal">
-                    <div class="portfolio__img">
-                        <img src="images/passerelle-bat2.png" alt="Rendu bâtiment 2" style="width:100%;height:100%;object-fit:cover;">
-                    </div>
-                    <div class="portfolio__caption">
-                        <h3>Bâtiment 2</h3>
-                        <p>Rendu 3D extérieur</p>
-                    </div>
-                </div>
-                <div class="portfolio__item reveal">
-                    <div class="portfolio__img">
-                        <img src="images/passerelle-bat3.png" alt="Rendu bâtiment 3" style="width:100%;height:100%;object-fit:cover;">
-                    </div>
-                    <div class="portfolio__caption">
-                        <h3>Bâtiment 3</h3>
-                        <p>Rendu 3D extérieur</p>
+                <div class="portfolio__expand">
+                    <div class="portfolio__expand-strip" tabindex="0">
+                        <button class="portfolio__thumb is-active" data-src="images/passerelle-bat1.png" data-caption="Bâtiment 1 — Rendu 3D extérieur"><img src="images/passerelle-bat1.png" alt=""></button>
+                        <button class="portfolio__thumb" data-src="images/passerelle-bat2.png" data-caption="Bâtiment 2 — Rendu 3D extérieur"><img src="images/passerelle-bat2.png" alt=""></button>
+                        <button class="portfolio__thumb" data-src="images/passerelle-bat3.png" data-caption="Bâtiment 3 — Rendu 3D extérieur"><img src="images/passerelle-bat3.png" alt=""></button>
+                        <button class="portfolio__thumb" data-src="images/passerelle-interieur.png" data-caption="Salon Vue 1 — Appartement Bâtiment 1"><img src="images/passerelle-interieur.png" alt=""></button>
+                        <button class="portfolio__thumb" data-src="images/passerelle-salon.png" data-caption="Salon Vue 2 — Appartement Bâtiment 1"><img src="images/passerelle-salon.png" alt=""></button>
+                        <button class="portfolio__thumb" data-src="images/passerelle-chambre.png" data-caption="Chambre — Appartement Bâtiment 1"><img src="images/passerelle-chambre.png" alt=""></button>
+                        <button class="portfolio__thumb" data-src="images/passerelle-sdb.png" data-caption="Salle de bain — Appartement Bâtiment 1"><img src="images/passerelle-sdb.png" alt=""></button>
                     </div>
                 </div>
-                <!-- Vues intérieures — Appartement type, Bâtiment 1 -->
-                <div class="portfolio__interior-label reveal">
-                    <span class="portfolio__interior-badge">Vues intérieures</span>
-                    <span class="portfolio__interior-info">Appartement type — Bâtiment 1</span>
-                </div>
-                <div class="portfolio__item portfolio__item--wide reveal">
-                    <div class="portfolio__img">
-                        <img src="images/passerelle-interieur.png" alt="Rendu intérieur salon - Appartement Bâtiment 1" style="width:100%;height:100%;object-fit:cover;">
+            </article>
+
+            <!-- ── PROJET 2 : Réhabilitation maison 80m² ── -->
+            <article class="portfolio__card reveal" data-project="rehab">
+                <div class="portfolio__card-trigger">
+                    <div class="portfolio__card-img">
+                        <img src="images/rehab-rendu-exterieur.jpg" alt="Réhabilitation maison 80m²" data-cover="images/rehab-rendu-exterieur.jpg">
                     </div>
-                    <div class="portfolio__caption">
-                        <h3>Salon — Vue 1</h3>
-                        <p>Appartement Bâtiment 1 · Séjour ouvert</p>
-                    </div>
-                </div>
-                <div class="portfolio__item reveal">
-                    <div class="portfolio__img">
-                        <img src="images/passerelle-salon.png" alt="Rendu intérieur salon vue 2 - Appartement Bâtiment 1" style="width:100%;height:100%;object-fit:cover;">
-                    </div>
-                    <div class="portfolio__caption">
-                        <h3>Salon — Vue 2</h3>
-                        <p>Appartement Bâtiment 1 · Second angle</p>
+                    <div class="portfolio__card-body">
+                        <span class="portfolio__card-cat">Réhabilitation lourde</span>
+                        <h3 class="portfolio__card-title">Maison Milly-la-Forêt</h3>
+                        <p class="portfolio__card-meta">Maison individuelle · 80m² · 2 vues</p>
                     </div>
                 </div>
-                <div class="portfolio__item reveal">
-                    <div class="portfolio__img">
-                        <img src="images/passerelle-chambre.png" alt="Rendu chambre - Appartement Bâtiment 1" style="width:100%;height:100%;object-fit:cover;">
-                    </div>
-                    <div class="portfolio__caption">
-                        <h3>Chambre</h3>
-                        <p>Appartement Bâtiment 1 · Rendu photoréaliste</p>
+                <div class="portfolio__expand">
+                    <div class="portfolio__expand-strip" tabindex="0">
+                        <button class="portfolio__thumb is-active" data-src="images/rehab-rendu-exterieur.jpg" data-caption="Vue extérieure — Rendu 3D photoréaliste"><img src="images/rehab-rendu-exterieur.jpg" alt=""></button>
+                        <button class="portfolio__thumb" data-src="images/rehab-plans.jpg" data-caption="Plans techniques 2D — Façade"><img src="images/rehab-plans.jpg" alt=""></button>
                     </div>
                 </div>
-                <div class="portfolio__item reveal">
-                    <div class="portfolio__img">
-                        <img src="images/passerelle-sdb.png" alt="Rendu salle de bain - Appartement Bâtiment 1" style="width:100%;height:100%;object-fit:cover;">
+            </article>
+
+            <!-- ── PROJET 3 : Meuble TV sur mesure ── -->
+            <article class="portfolio__card reveal" data-project="meuble-tv">
+                <div class="portfolio__card-trigger">
+                    <div class="portfolio__card-img">
+                        <img src="images/meuble-tv-1.jpg" alt="Meuble TV sur mesure" data-cover="images/meuble-tv-1.jpg">
                     </div>
-                    <div class="portfolio__caption">
-                        <h3>Salle de bain</h3>
-                        <p>Appartement Bâtiment 1 · Rendu photoréaliste</p>
+                    <div class="portfolio__card-body">
+                        <span class="portfolio__card-cat">Mobilier sur mesure</span>
+                        <h3 class="portfolio__card-title">Meuble TV</h3>
+                        <p class="portfolio__card-meta">Modélisation 3D · Pièce unique · 3 vues</p>
                     </div>
                 </div>
-            </div>
+                <div class="portfolio__expand">
+                    <div class="portfolio__expand-strip" tabindex="0">
+                        <button class="portfolio__thumb is-active" data-src="images/meuble-tv-1.jpg" data-caption="Vue 1 — Modélisation 3D"><img src="images/meuble-tv-1.jpg" alt=""></button>
+                        <button class="portfolio__thumb" data-src="images/meuble-tv-2.jpg" data-caption="Vue 2 — Modélisation 3D"><img src="images/meuble-tv-2.jpg" alt=""></button>
+                        <button class="portfolio__thumb" data-src="images/meuble-tv-3.jpg" data-caption="Vue 3 — Modélisation 3D"><img src="images/meuble-tv-3.jpg" alt=""></button>
+                    </div>
+                </div>
+            </article>
         </div>
 
-        <!-- ── DOSSIER COMPLET : Exemple PCMI ── -->
-        <div class="portfolio__section reveal">
-            <div class="portfolio__section-header">
-                <span class="portfolio__project-num">03</span>
-                <h3 class="portfolio__project-title">Dossier PCMI complet</h3>
-                <p class="portfolio__project-meta">Exemple : Réhabilitation maison 80m² · Milly-la-Forêt</p>
+        <!-- ── DOSSIER PCMI complet (gardé séparé : c'est explicatif, pas un projet) ── -->
+        <div class="portfolio__dossier reveal">
+            <div class="portfolio__dossier-header">
+                <span class="section-label">Exemple de dossier</span>
+                <h3 class="portfolio__dossier-title">Dossier PCMI <em>complet</em>.</h3>
             </div>
-            <div class="portfolio__dossier-layout reveal">
+            <div class="portfolio__dossier-layout">
                 <div class="portfolio__dossier-img">
                     <img src="images/dossier-pcmi-complet.png" alt="Dossier PCMI complet" style="width:100%;height:100%;object-fit:cover;border-radius:12px;">
                 </div>
@@ -354,6 +314,7 @@
             </div>
         </div>
     </section>
+
 
     <!-- ============================================ -->
     <!-- FORMULES -->
@@ -547,8 +508,7 @@
     <footer class="footer">
         <div class="footer__inner">
             <div class="footer__brand">
-                <span class="nav__logo-m2e">M2E</span>
-                <span class="nav__logo-project">PROJECT</span>
+                <img src="images/logo-bleu.png" alt="M2E Project" class="footer__logo-img">
             </div>
             <p class="footer__legal">
                 © 2026 M2E Project — Auto-entreprise<br>
@@ -574,6 +534,6 @@
         </a>
     </div>
 
-    <script src="main.js"></script>
+    <script src="main.js?v=3"></script>
 </body>
 </html>
