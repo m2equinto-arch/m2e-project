@@ -39,9 +39,26 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=3">
+    <link rel="stylesheet" href="style.css?v=4">
 </head>
 <body>
+
+    <!-- ============================================ -->
+    <!-- PAGE LOADER -->
+    <!-- ============================================ -->
+    <div class="page-loader" id="pageLoader">
+        <div class="page-loader__logo">
+            <img src="images/logo-bleu.png" alt="M2E Project" class="page-loader__logo-img">
+        </div>
+        <div class="page-loader__bar"></div>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- SCROLL PROGRESS BAR -->
+    <!-- ============================================ -->
+    <div class="scroll-progress" aria-hidden="true">
+        <div class="scroll-progress__bar"></div>
+    </div>
 
     <!-- ============================================ -->
     <!-- NAVIGATION -->
@@ -93,6 +110,30 @@
             <div class="hero__scroll-line"></div>
         </div>
     </header>
+
+    <!-- ============================================ -->
+    <!-- STATS BAND -->
+    <!-- ============================================ -->
+    <section class="stats" aria-label="Chiffres clés">
+        <div class="stats__grid">
+            <div class="stat reveal">
+                <span class="stat__number" data-counter="100">0</span><span class="stat__suffix">%</span>
+                <p class="stat__label">Sur mesure</p>
+            </div>
+            <div class="stat reveal reveal--d1">
+                <span class="stat__number" data-counter="8">0</span>
+                <p class="stat__label">Pièces PCMI</p>
+            </div>
+            <div class="stat reveal reveal--d2">
+                <span class="stat__number" data-counter="3">0</span><span class="stat__suffix">D</span>
+                <p class="stat__label">Rendus photoréalistes</p>
+            </div>
+            <div class="stat reveal reveal--d3">
+                <span class="stat__number" data-counter="48">0</span><span class="stat__suffix">h</span>
+                <p class="stat__label">Réponse garantie</p>
+            </div>
+        </div>
+    </section>
 
     <!-- ============================================ -->
     <!-- INTRO / QUI SUIS-JE -->
@@ -534,6 +575,6 @@
         </a>
     </div>
 
-    <script src="main.js?v=3"></script>
+    <script src="main.js?v=4"></script>
 </body>
 </html>
