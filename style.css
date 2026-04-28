@@ -502,8 +502,15 @@ h2 em, h1 em {
     height: 100%;
 }
 
-.nav__cta::after {
+.nav__cta::after,
+.nav__links a.nav__cta::after,
+.nav__links li a.nav__cta::after {
+    content: none !important;
     display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+    background: transparent !important;
+    opacity: 0 !important;
 }
 
 /* Mobile toggle */
