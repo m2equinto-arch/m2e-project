@@ -276,20 +276,23 @@ h2 em, h1 em {
     isolation: isolate;
 }
 
-/* Liquid hover fill */
+/* Liquid hover fill — clipped properly, no leak */
 .btn::before {
     content: '';
     position: absolute;
-    inset: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 0;
     background: var(--blue-deep);
-    transform: translateY(101%);
-    transition: transform 0.5s var(--ease-out-expo);
+    transition: height 0.5s var(--ease-out-expo);
     z-index: -1;
     border-radius: inherit;
+    pointer-events: none;
 }
 
 .btn:hover::before {
-    transform: translateY(0);
+    height: 100%;
 }
 
 .btn--primary {
@@ -479,12 +482,15 @@ h2 em, h1 em {
 .nav__cta::before {
     content: '';
     position: absolute;
-    inset: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 0;
     background: var(--blue-deep);
-    transform: translateY(101%);
-    transition: transform 0.45s var(--ease-out-expo);
+    transition: height 0.45s var(--ease-out-expo);
     z-index: -1;
     border-radius: inherit;
+    pointer-events: none;
 }
 
 .nav__cta:hover {
@@ -493,7 +499,7 @@ h2 em, h1 em {
 }
 
 .nav__cta:hover::before {
-    transform: translateY(0);
+    height: 100%;
 }
 
 .nav__cta::after {
