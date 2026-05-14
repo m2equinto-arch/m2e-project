@@ -2267,6 +2267,31 @@ h2 em, h1 em {
         align-items: flex-start;
     }
 
+   /* --- AJOUT : Overlay / Backdrop du menu mobile --- */
+    .nav__links::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 100%; /* Se place à gauche du menu de 280px */
+        width: 100vw; /* Couvre tout le reste de l'écran */
+        height: 100vh;
+        background: rgba(255, 255, 255, 0.6); /* Blanc semi-transparent */
+        backdrop-filter: blur(8px); /* Effet de flou premium */
+        -webkit-backdrop-filter: blur(8px);
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.5s var(--ease-out-expo), visibility 0.5s;
+        pointer-events: none; /* Ne bloque pas le clic quand il est caché */
+    }
+
+    /* Activation de l'overlay quand le menu est ouvert */
+    .nav__links.is-open::before {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto; /* Devient cliquable pour fermer le menu (si JS configuré) */
+    }
+    /* -------------------------------------------------- */
+       
     .nav__links.is-open {
         transform: translateX(0);
     }
