@@ -2251,63 +2251,68 @@ h2 em, h1 em {
         display: flex;
     }
 
-    /* --- NOUVEAU MENU FLOTTANT --- */
     .nav__links {
-        position: absolute; 
-        top: 100%; 
-        right: var(--container-pad); 
-        width: 220px; 
-        height: auto; 
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh; /* <-- LA SOLUTION EST ICI : force la hauteur totale */
+        width: 280px;
         flex-direction: column;
-        background: rgba(255, 255, 255, 0.95); 
-        backdrop-filter: blur(10px); 
-        -webkit-backdrop-filter: blur(10px);
-        padding: 24px; 
-        gap: 16px;
-        border-radius: 16px; 
-        box-shadow: 0 12px 40px rgba(74, 125, 150, 0.15); 
-        border: 1px solid rgba(74, 125, 150, 0.1);
-        align-items: center; 
+        background: var(--white);
+        padding: 100px 40px 40px;
+        gap: 24px;
+        transform: translateX(100%);
+        transition: transform 0.5s var(--ease-out-expo);
+        box-shadow: -10px 0 40px rgba(0, 0, 0, 0.08);
+        align-items: flex-start;
+    }
+
+    /* Overlay / Backdrop du menu mobile avec flou premium */
+    .nav__links::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 100%; 
+        width: 100vw; 
+        height: 100vh;
+        background: rgba(255, 255, 255, 0.65); 
+        backdrop-filter: blur(8px); 
+        -webkit-backdrop-filter: blur(8px);
         opacity: 0;
         visibility: hidden;
-        transform: translateY(-15px);
-        transition: all 0.4s var(--ease-out-expo);
+        transition: opacity 0.5s var(--ease-out-expo), visibility 0.5s;
+        pointer-events: none; 
+    }
+
+    /* Activation de l'overlay */
+    .nav__links.is-open::before {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto; 
     }
 
     .nav__links.is-open {
-        opacity: 1;
-        visibility: visible;
-        transform: translateY(16px); 
+        transform: translateX(0);
     }
 
     .nav__links li {
         opacity: 0;
-        transform: translateY(-10px);
+        transform: translateX(20px);
         transition: opacity 0.4s var(--ease-out-expo), transform 0.4s var(--ease-out-expo);
-        width: 100%;
-        text-align: center;
     }
 
-    .nav__links.is-open li {
-        opacity: 1;
-        transform: translateY(0);
-    }
-
-    .nav__links.is-open li:nth-child(1) { transition-delay: 0.05s; }
-    .nav__links.is-open li:nth-child(2) { transition-delay: 0.10s; }
-    .nav__links.is-open li:nth-child(3) { transition-delay: 0.15s; }
-    .nav__links.is-open li:nth-child(4) { transition-delay: 0.20s; }
-    .nav__links.is-open li:nth-child(5) { transition-delay: 0.25s; }
-    .nav__links.is-open li:nth-child(6) { transition-delay: 0.30s; }
+    .nav__links.is-open li:nth-child(1) { transition-delay: 0.12s; }
+    .nav__links.is-open li:nth-child(2) { transition-delay: 0.18s; }
+    .nav__links.is-open li:nth-child(3) { transition-delay: 0.24s; }
+    .nav__links.is-open li:nth-child(4) { transition-delay: 0.30s; }
+    .nav__links.is-open li:nth-child(5) { transition-delay: 0.36s; }
+    .nav__links.is-open li:nth-child(6) { transition-delay: 0.42s; }
 
     .nav__cta {
-        margin-top: 8px;
-        width: 100%; 
-        justify-content: center;
+        margin-top: 16px;
     }
-    /* --- FIN DU NOUVEAU MENU --- */
 
-    /* --- VOS STYLES MOBILES EXISTANTS (À CONSERVER) --- */
+    /* --- TOUT LE RESTE DU SITE MOBILE (INTACT) --- */
     .hero {
         min-height: 90vh;
         padding-top: 100px;
