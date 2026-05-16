@@ -517,29 +517,35 @@ h2 em, h1 em {
 .nav__toggle {
     display: none;
     flex-direction: column;
-    gap: 6px;
+    gap: 5px;
     background: none;
     border: none;
     cursor: pointer;
     padding: 8px;
     z-index: 1001;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav__toggle span {
     display: block;
     width: 24px;
-    height: 1.5px;
+    height: 2px;
     background: var(--ink);
-    transition: all 0.4s var(--ease-out-expo);
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
     transform-origin: center;
 }
 
-.nav__toggle.is-active span:first-child {
-    transform: rotate(45deg) translateY(3.75px);
+.nav__toggle.is-active span:nth-child(1) {
+    transform: rotate(45deg) translateY(10px);
 }
 
-.nav__toggle.is-active span:last-child {
-    transform: rotate(-45deg) translateY(-3.75px);
+.nav__toggle.is-active span:nth-child(2) {
+    opacity: 0;
+    transform: translateX(-10px);
+}
+
+.nav__toggle.is-active span:nth-child(3) {
+    transform: rotate(-45deg) translateY(-10px);
 }
 
 /* =============================================
@@ -2256,85 +2262,112 @@ h2 em, h1 em {
         top: 0;
         right: 0;
         height: 100vh;
-        width: 280px;
+        width: 100%;
+        max-width: 320px;
         flex-direction: column;
         background: var(--white);
-        padding: 100px 28px 40px;
-        gap: 24px;
+        padding: 80px 24px 40px;
+        gap: 8px;
         transform: translateX(100%);
-        transition: transform 0.5s var(--ease-out-expo);
-        box-shadow: -10px 0 40px rgba(0, 0, 0, 0.08);
-        align-items: flex-start;
+        transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: -10px 0 50px rgba(0, 0, 0, 0.12);
+        align-items: stretch;
+        z-index: 999;
+        overflow-y: auto;
     }
 
-    /* Overlay / Backdrop du menu mobile avec flou */
+    /* Overlay / Backdrop du menu mobile */
     .nav__links::before {
         content: '';
-        position: absolute;
+        position: fixed;
         top: 0;
-        right: 100%; 
-        width: 100vw; 
-        height: 100vh;
-        background: rgba(255, 255, 255, 0.65); 
-        backdrop-filter: blur(8px); 
-        -webkit-backdrop-filter: blur(8px);
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
         opacity: 0;
         visibility: hidden;
-        transition: opacity 0.5s var(--ease-out-expo), visibility 0.5s;
-        pointer-events: none; 
+        transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.4s;
+        z-index: -1;
+        pointer-events: none;
     }
 
-    /* Activation de l'overlay */
-    .nav__links.is-open::before {
-        opacity: 1;
-        visibility: visible;
-        pointer-events: auto; 
-    }
-
+    /* Menu ouvert */
     .nav__links.is-open {
         transform: translateX(0);
     }
 
-    /* 1. L'état initial des liens (invisibles et décalés) */
+    .nav__links.is-open::before {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+
+    /* Liens du menu */
     .nav__links li {
         opacity: 0;
         transform: translateX(20px);
-        transition: opacity 0.4s var(--ease-out-expo), transform 0.4s var(--ease-out-expo);
+        transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
+                    transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
-    /* 2. LA CORRECTION : L'état ouvert des liens (visibles et à leur place) */
     .nav__links.is-open li {
         opacity: 1;
         transform: translateX(0);
     }
 
-    /* Couleur du texte du menu mobile - VISIBLE SUR FOND BLANC */
+    /* Animations en cascade */
+    .nav__links.is-open li:nth-child(1) { transition-delay: 0.05s; }
+    .nav__links.is-open li:nth-child(2) { transition-delay: 0.1s; }
+    .nav__links.is-open li:nth-child(3) { transition-delay: 0.15s; }
+    .nav__links.is-open li:nth-child(4) { transition-delay: 0.2s; }
+    .nav__links.is-open li:nth-child(5) { transition-delay: 0.25s; }
+    .nav__links.is-open li:nth-child(6) { transition-delay: 0.3s; }
+
+    /* Texte des liens */
     .nav__links li a {
         color: var(--ink) !important;
-        font-size: 16px;
+        font-size: 15px;
         font-weight: 500;
+        display: block;
+        padding: 14px 16px;
+        border-radius: 8px;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        text-align: left;
     }
 
     .nav__links li a::after {
         display: none;
     }
 
-    .nav__cta {
-        padding: 12px 20px !important;
-        font-size: 14px !important;
-        white-space: nowrap;
+    .nav__links li a:active,
+    .nav__links li a:hover {
+        background: rgba(74, 125, 150, 0.08);
+        color: var(--blue) !important;
     }
 
-    /* 3. L'animation en cascade */
-    .nav__links.is-open li:nth-child(1) { transition-delay: 0.12s; }
-    .nav__links.is-open li:nth-child(2) { transition-delay: 0.18s; }
-    .nav__links.is-open li:nth-child(3) { transition-delay: 0.24s; }
-    .nav__links.is-open li:nth-child(4) { transition-delay: 0.30s; }
-    .nav__links.is-open li:nth-child(5) { transition-delay: 0.36s; }
-    .nav__links.is-open li:nth-child(6) { transition-delay: 0.42s; }
+    /* Bouton Devis */
+    .nav__item-cta {
+        margin-top: 16px;
+        padding-top: 16px;
+        border-top: 1px solid rgba(74, 125, 150, 0.15);
+    }
 
     .nav__cta {
-        margin-top: 16px;
+        padding: 14px 16px !important;
+        font-size: 14px !important;
+        font-weight: 600 !important;
+        background: var(--blue) !important;
+        color: var(--white) !important;
+        border-radius: 8px !important;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        white-space: nowrap;
+        text-align: center;
+    }
+
+    .nav__cta:active {
+        background: var(--blue-deep) !important;
+        transform: scale(0.98);
     }
 
     /* --- TOUT LE RESTE DU SITE MOBILE --- */
