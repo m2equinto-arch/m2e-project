@@ -71,6 +71,25 @@
                 document.body.style.overflow = '';
             });
         });
+
+        // Fermer le menu avec la touche Échap
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape' && navLinks.classList.contains('is-open')) {
+                navToggle.classList.remove('is-active');
+                navLinks.classList.remove('is-open');
+                document.body.style.overflow = '';
+            }
+        });
+
+        // Fermer le menu au scroll
+        var lastScrollPosition = 0;
+        window.addEventListener('scroll', function () {
+            if (navLinks.classList.contains('is-open')) {
+                navToggle.classList.remove('is-active');
+                navLinks.classList.remove('is-open');
+                document.body.style.overflow = '';
+            }
+        }, { passive: true });
     }
 
     // Active link tracking based on section in viewport
