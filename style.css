@@ -2259,7 +2259,7 @@ h2 em, h1 em {
         width: 280px;
         flex-direction: column;
         background: var(--white);
-        padding: 100px 40px 40px;
+        padding: 100px 28px 40px;
         gap: 24px;
         transform: translateX(100%);
         transition: transform 0.5s var(--ease-out-expo);
@@ -2317,6 +2317,12 @@ h2 em, h1 em {
 
     .nav__links li a::after {
         display: none;
+    }
+
+    .nav__cta {
+        padding: 12px 20px !important;
+        font-size: 14px !important;
+        white-space: nowrap;
     }
 
     /* 3. L'animation en cascade */
