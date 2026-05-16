@@ -2308,6 +2308,17 @@ h2 em, h1 em {
         transform: translateX(0);
     }
 
+    /* Couleur du texte du menu mobile - VISIBLE SUR FOND BLANC */
+    .nav__links li a {
+        color: var(--ink) !important;
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    .nav__links li a::after {
+        display: none;
+    }
+
     /* 3. L'animation en cascade */
     .nav__links.is-open li:nth-child(1) { transition-delay: 0.12s; }
     .nav__links.is-open li:nth-child(2) { transition-delay: 0.18s; }
